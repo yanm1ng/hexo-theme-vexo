@@ -1,0 +1,29 @@
+<header class="header">
+  <div class="header-container">
+    <a class="home-link" href="<%- url_for() %>">
+      <div class="logo"></div>
+      <span><%-config.title%></span>
+    </a>
+    <ul class="right-list">
+      <% for(name in theme.menu) { %>
+        <li class="list-item">
+          <% if (url_for(theme.menu[name]) == '/' + path.replace('/index.html', '') || (url_for(theme.menu[name]) == '/' && is_home())) { %>
+            <a href="<%- url_for(theme.menu[name]) %>" class="item-link active"><%-name%></a>
+          <% } else { %>
+            <a href="<%- url_for(theme.menu[name]) %>" class="item-link"><%-name%></a>
+          <% } %>
+        </li>
+      <% } %>
+    </ul>
+    <div class="menu"></div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        <% for(name in theme.menu) { %>
+          <li class="menu-item">
+            <a class="menu-link" href="<%- url_for(theme.menu[name]) %>" class="item-link"><%=name%></a>
+          </li>
+        <% } %>
+      </ul>
+    </div>
+  </div>
+</header>

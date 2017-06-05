@@ -1,0 +1,69 @@
+@import "_config"
+
+body
+  font-family: 'Avenir', Helvetica, Arial, sans-serif
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  position: relative
+  height: 100%
+  margin: 0
+
+ol, ul, form, p
+  margin: 0
+
+p
+  color: color-dark
+
+a
+  text-decoration: none
+  color: color-primary
+  cursor: pointer
+
+pre
+  overflow-x: auto
+
+.app-body
+  padding: 75px 2em 30px 2em
+  margin: 0 auto
+  height: 100%
+  max-width: 750px
+  position: relative
+  transition: opacity .2s
+
+.tags
+  margin: 15px 0
+
+.tag-code
+  font-family: 'Roboto Mono', Monaco, courier, monospace
+  font-size: 0.8em
+  background-color: color-background
+  color: color-orange
+  padding: 3px 5px
+  margin: 0 2px
+  border-radius: 2px
+  white-space: nowrap
+
+h2.article-head
+  font-size: 1.5em
+  margin-bottom: 0
+
+.article-head > a
+  color: color-dark
+  &:hover
+    border-bottom: 2px solid color-primary
+
+.article-date
+  color: #7f8c8d
+  font-size: 12px
+  margin: 10px 0
+
+.article-summary
+  margin: 20px 0
+  @media m-mobile
+    font-size: 15px
+
+.more
+  font-size: 14px
+  font-weight: 600
+
+@import "_partial/header"
