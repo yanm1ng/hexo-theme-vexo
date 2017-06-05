@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
-  <%-partial('_partial/head') %>
+  <%- partial('_partial/head') %>
   <body>
-    <%-partial('_partial/header') %>
+    <%- partial('_partial/header') %>
     <main class="app-body">
-      <%-body%>
+      <%- body %>
     </main>
-    <%- js('js/script') %>
+    <%- partial('_partial/footer') %>
   </body>
 </html>

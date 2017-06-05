@@ -7,12 +7,10 @@ body
   position: relative
   height: 100%
   margin: 0
+  color: color-dark
 
 ol, ul, form, p
   margin: 0
-
-p
-  color: color-dark
 
 a
   text-decoration: none
@@ -30,8 +28,15 @@ pre
   position: relative
   transition: opacity .2s
 
+.hljs
+  background: none !important
+
 .tags
   margin: 15px 0
+  span
+    &:first-child
+      font-size: .8em
+      font-weight: 600
 
 .tag-code
   font-family: 'Roboto Mono', Monaco, courier, monospace
@@ -43,6 +48,9 @@ pre
   border-radius: 2px
   white-space: nowrap
 
+.article-card
+  padding-bottom: 30px
+
 h2.article-head
   font-size: 1.5em
   margin-bottom: 0
@@ -53,12 +61,13 @@ h2.article-head
     border-bottom: 2px solid color-primary
 
 .article-date
-  color: #7f8c8d
+  color: color-gray
   font-size: 12px
   margin: 10px 0
 
 .article-summary
   margin: 20px 0
+  color: color-dark
   @media m-mobile
     font-size: 15px
 
@@ -66,4 +75,72 @@ h2.article-head
   font-size: 14px
   font-weight: 600
 
+#post-markdown
+  a
+    color: color-primary
+    font-weight: 600
+    word-break: break-all
+  h1
+    margin: .6em 0
+    font-size: 1.8em
+  .post-date
+    color: color-gray
+    font-size: 12px
+    margin: 10px 0
+
+.markdown-content
+  overflow: auto
+  p
+    line-height: 1.6em
+  h3
+    margin: 1em 0 .8em
+    font-size: 1.3em
+    padding-bottom: .3em
+    border-bottom: 1px solidcolor-border
+  h4
+    margin: 1em 0 .8em
+    font-size: 1.2em
+    &:before
+      content: "#";
+      color: color-primary
+      margin-right: 5px
+      font-size: 1.2em
+      font-weight: 700
+  blockquote
+    margin: 1em 0
+    padding:  15px 20px
+    border-left: 4px solid color-primary
+    background: color-background
+  ul
+    overflow: auto
+    margin: 20px 0
+  img
+    width: 100%
+    max-width: 500px
+    display: block
+    margin: 20px auto
+  strong
+    color: color-primary
+  figure
+    background: color-background
+    padding: 10px 15px
+    border-radius: 4px
+    font-size: 13px
+    margin: 20px 0
+    overflow: auto
+.qrcode
+  padding: 30px 0
+  text-align: center
+  border-bottom: 1px dashed color-border
+  canvas
+    padding: 12px
+    box-shadow: 0 0 1px color-shadow
+  p
+    font-size: 12px
+    display: block
+    text-align: center
+    color: color-gray
+
 @import "_partial/header"
+@import "_partial/footer"
+@import "_partial/pager"

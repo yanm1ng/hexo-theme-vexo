@@ -3,3 +3,5 @@ menu:
  Home: /
  Archive: /archives
  Github: https://github.com/yanm1ng
+highlight:
+  tomorrow
