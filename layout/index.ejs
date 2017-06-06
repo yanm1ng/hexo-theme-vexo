@@ -1,23 +1,25 @@
-<% page.posts.each(function(post) { %>
-  <article class="article-card">
-    <h2 class="article-head">
-      <a href="<%- url_for(post.path) %>"><%- post.title %></a>
-    </h2>
-    <p class="article-date"><%-date(post.date, "YYYY-MM-DD")%></p>
-    <% if (post.tags && post.tags.length) { %>
-      <%- partial('_partial/tag', { tags: post.tags }) %>
-    <% } %>
-    <div class="article-summary">
-      <% if (post.excerpt) { %>
-        <%- post.excerpt %>
-      <% } else { %>
-        <%- truncate(strip_html(post.content), { length: 150, omission: ' ...' }) %>
+<main class="app-body">
+  <% page.posts.each(function(post) { %>
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="<%- url_for(post.path) %>"><%- post.title %></a>
+      </h2>
+      <p class="article-date"><%-date(post.date, "YYYY-MM-DD")%></p>
+      <% if (post.tags && post.tags.length) { %>
+        <%- partial('_partial/tag', { tags: post.tags }) %>
       <% } %>
-    </div>
-    <a class="more" href="<%- url_for(post.path) %>">Read more</a>
-  </article>
-<% }) %>
+      <div class="article-summary">
+        <% if (post.excerpt) { %>
+          <%- post.excerpt %>
+        <% } else { %>
+          <%- truncate(strip_html(post.content), { length: 150, omission: ' ...' }) %>
+        <% } %>
+      </div>
+      <a class="more" href="<%- url_for(post.path) %>">Read more</a>
+    </article>
+  <% }) %>
 
-<% if (page.total > 1){ %>
-  <%- partial('_partial/pager') %>
-<% } %>
+  <% if (page.total > 1){ %>
+    <%- partial('_partial/pager') %>
+  <% } %>
+</main>

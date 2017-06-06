@@ -3,8 +3,10 @@
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   <title>
     <% if (page.title){ %>
-      <%= page.title %> | 
-    <% } %><%= config.title %>
+      <%= page.title %>
+    <% } else { %>
+      <%= config.title %>
+    <% } %>
   </title>
   <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
   <%- css('css/style') %>

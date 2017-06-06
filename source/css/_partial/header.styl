@@ -10,8 +10,14 @@
 
 .fixed-header
   position: fixed
-  background-color: rgba(255, 255, 255, 0.96)
-  box-shadow: 0 0 10px rgba(14, 14, 14, .26)
+  background-color: rgba(255, 255, 255, 0.98)
+  box-shadow: 0 0 3px rgba(14, 14, 14, .26)
+  .home-link
+    color: color-primary
+  .menu .icon-bar
+    background-color: color-gray
+  .item-link
+    color: color-dark
 
 .header-container
   max-width: 1200px
@@ -20,7 +26,7 @@
   padding: 10px 60px
   position: relative
   @media m-mobile
-    padding: 6px 20px;
+    padding: 6px 20px
     position: relative
 
 .logo
@@ -52,7 +58,7 @@
   height: 40px
   line-height: 40px
   text-decoration: none
-  color: color-dark
+  color: color-white
   padding-bottom: 3px
 
 .item-link
@@ -87,15 +93,15 @@
   width: 100%
   overflow: hidden
   max-height: 0
-  background: #ffffff
-  -webkit-transition: max-height .4s ease
-  transition: max-height .4s ease
+  background: color-white
+  -webkit-transition: max-height .2s ease
+  transition: max-height .2s ease
   @media m-mobile
     display: block
 
 .open
   max-height: 300px
-  transition-delay: 0s
+  transition-delay: .1s
 
 .menu-list
   padding: 0
