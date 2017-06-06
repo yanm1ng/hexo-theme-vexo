@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header" data-ispost="<%- is_post() %>" data-ishome="<%- is_home() %>">
   <div class="header-container">
     <a class="home-link" href="<%- url_for() %>">
       <div class="logo"></div>
@@ -15,7 +15,11 @@
         </li>
       <% } %>
     </ul>
-    <div class="menu"></div>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
     <div class="menu-mask">
       <ul class="menu-list">
         <% for(name in theme.menu) { %>

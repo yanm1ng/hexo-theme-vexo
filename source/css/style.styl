@@ -21,7 +21,7 @@ pre
   overflow-x: auto
 
 .app-body
-  padding: 75px 2em 30px 2em
+  padding: 0 1em 30px 1em
   margin: 0 auto
   height: 100%
   max-width: 750px
@@ -75,20 +75,23 @@ h2.article-head
   font-size: 14px
   font-weight: 600
 
-#post-markdown
-  a
-    color: color-primary
-    font-weight: 600
-    word-break: break-all
-  h1
-    margin: .6em 0
-    font-size: 1.8em
+#article-header
+  width: 100%
+  position: absolute
+  top: 0;
+  left: 0
+  padding: 60px 15px 15px;
+  h2
+    margin: .8em 0
+    font-size: 1.5em
+    color: color-white
   .post-date
-    color: color-gray
+    color: color-white
     font-size: 12px
     margin: 10px 0
 
 .markdown-content
+  padding-top: 180px
   overflow: auto
   p
     line-height: 1.6em
@@ -123,11 +126,12 @@ h2.article-head
     color: color-primary
   figure
     background: color-background
-    padding: 10px 15px
+    padding: 0 10px
     border-radius: 4px
     font-size: 13px
     margin: 20px 0
     overflow: auto
+
 .qrcode
   padding: 30px 0
   text-align: center

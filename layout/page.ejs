@@ -1,6 +1,8 @@
-<article id="post-markdown">
-  <h2><%- page.title %></h2>
-  <p class="post-date"><%-date(page.date, "YYYY-MM-DD")%></p>
+<article class="post-article">
+  <div id="article-header">
+    <h2><%- page.title %></h2>
+    <p class="post-date"><%-date(page.date, "YYYY-MM-DD")%></p>
+  </div>
   <section class="markdown-content"><%- page.content %></section>
   <% if (page.tags && page.tags.length) { %>
     <div class="tags">
@@ -17,6 +19,7 @@
 <script>
   (function () {
     var url = '<%= config.url %>/<%= page.path %>';
+    $('#article-header').geopattern(url);
     var qr = new QRious({
       element: document.getElementById('share-qrcode'),
       value: url
