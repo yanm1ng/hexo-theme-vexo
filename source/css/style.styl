@@ -83,64 +83,26 @@ h2.article-head
   box-sizing: border-box
   top: 0;
   left: 0
-  padding: 90px 20px 20px 20px
+  padding: 80px 20px 20px 20px
   text-align: center;
   @media m-mobile
     padding: 80px 10px 20px 10px
   h2
     margin: .4em 0
-    font-size: 2em
+    font-size: 40px
     color: color-white
     text-shadow: 0 0 40px color-dark;
+    @media m-mobile
+      font-size: 30px
   .post-date
     font-size: 12px
     margin: 10px 0
     color: color-white
 
 .post-article
-  margin-top: 20px
-
-.markdown-content
-  padding-top: 180px
-  overflow: auto
-  p
-    line-height: 1.6em
-  h3
-    margin: 1em 0 .8em
-    font-size: 1.3em
-    padding-bottom: .3em
-    border-bottom: 1px solidcolor-border
-  h4
-    margin: 1em 0 .8em
-    font-size: 1.2em
-    &:before
-      content: "#";
-      color: color-primary
-      margin-right: 5px
-      font-size: 1.2em
-      font-weight: 700
-  blockquote
-    margin: 1em 0
-    padding:  15px 20px
-    border-left: 4px solid color-primary
-    background: color-background
-  ul
-    overflow: auto
-    margin: 20px 0
-  img
-    width: 100%
-    max-width: 500px
-    display: block
-    margin: 20px auto
-  strong
-    color: color-primary
-  figure
-    background: color-background
-    padding: 0 10px
-    border-radius: 4px
-    font-size: 13px
-    margin: 20px 0
-    overflow: auto
+  margin-top: 30px
+  @media m-mobile
+    margin-top: 10px
 
 .qrcode
   padding: 30px 0
@@ -182,3 +144,4 @@ h2.article-head
 @import "_partial/header"
 @import "_partial/footer"
 @import "_partial/pager"
+@import "_partial/markdown"

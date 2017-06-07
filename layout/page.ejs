@@ -15,6 +15,7 @@
       <canvas id="share-qrcode"></canvas>
       <p>扫描二维码，分享此文章</p>
     </div>
+    <div id="comments"></div>
   </article>
 </main>
 
@@ -26,5 +27,27 @@
       element: document.getElementById('share-qrcode'),
       value: url
     });
+
+    var gitment = new Gitment({
+      owner: "<%= theme['gitment_owner'] %>",
+      repo: "<%= theme['gitment_repo'] %>",
+      oauth: {
+        client_id: "<%= theme['gitment_oauth_id'] %>",
+        client_secret: "<%= theme['gitment_oauth_secret'] %>"
+      },
+      theme: {
+        render(state, instance) {
+          const container = document.createElement('div')
+          container.lang = "en-US"
+          container.className = 'gitment-container gitment-root-container'
+          container.appendChild(instance.renderHeader(state, instance))
+          container.appendChild(instance.renderEditor(state, instance))
+          container.appendChild(instance.renderComments(state, instance))
+          container.appendChild(instance.renderFooter(state, instance))
+          return container;
+        }
+      }
+    })
+    gitment.render(document.getElementById('comments'))
   })();
 </script>
