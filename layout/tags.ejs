@@ -1,7 +1,14 @@
 <div id="article-banner">
   <h2>Tags</h2>
+  <p class="post-date">根据标签快速检索</p>
 </div>
-
+<main class="app-body">
+  <div id="tag-cloud">
+    <% site.tags.map(function(tag) { %>
+      <a href="#<%= tag.name %>" title="<%= tag.name %>" rel="<%= tag.length %>"><%= tag.name %></a>
+    <% }) %>
+  </div>
+</main>
 
 <script>
   (function () {

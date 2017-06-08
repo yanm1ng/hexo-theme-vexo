@@ -11,16 +11,22 @@
   var header = $('.header')
   var banner = document.getElementById('article-banner') || false
   var top = $('.scroll-top')
+  var path = window.location.pathname
+  var isOpen = false
 
   $('.menu').on('click', function() {
+    if (!header.hasClass('fixed-header') || isOpen) {
+      header.toggleClass('fixed-header')
+      isOpen = !isOpen
+    }
     $('.menu-mask').toggleClass('open')
   })
 
   top.on('click', function() {
     smoothScroll()
   })
-
-  if (!header.data('ispost') || header.data('ishome')) {
+  
+  if (['/', '/archives/'].indexOf(path) != -1) {
     header.addClass('fixed-header')
   }
 

@@ -15,7 +15,7 @@
           <%- truncate(strip_html(post.content), { length: 150, omission: ' ...' }) %>
         <% } %>
       </div>
-      <a class="more" href="<%- url_for(post.path) %>">Read more</a>
+      <a class="more" href="<%- url_for(post.path) %>"><%- theme.excerpt_link %></a>
     </article>
   <% }) %>
 
