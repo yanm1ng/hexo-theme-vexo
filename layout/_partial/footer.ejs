@@ -30,7 +30,8 @@
       var codeTag = document.createElement('code');
       codeTag.className = lang;
       codeTag.innerHTML = codeHtml;
-      $(this).attr('class', '').empty().html(codeTag)
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
       hljs.highlightBlock(block);
     });
   })

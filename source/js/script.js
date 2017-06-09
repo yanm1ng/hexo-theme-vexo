@@ -1,13 +1,5 @@
 (function($){
 
-  function smoothScroll() {
-    var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
-    if (currentScroll > 0) {
-      window.requestAnimationFrame(smoothScroll);
-      window.scrollTo(0, currentScroll - (currentScroll / 5));
-    }
-  }
-
   var header = $('.header')
   var banner = document.getElementById('article-banner') || false
   var top = $('.scroll-top')
@@ -22,8 +14,16 @@
     $('.menu-mask').toggleClass('open')
   })
 
+  $('#tag-cloud a').on('click', function() {
+    var list = $('.tag-list')
+    var name = $(this).data('name')
+    var maoH = list.find('#' + name).offset().top
+
+    $('html,body').animate({ scrollTop: maoH - header.height() }, 500);
+  })
+
   top.on('click', function() {
-    smoothScroll()
+    $('html,body').animate({ scrollTop: 0 }, 600);
   })
   
   if (['/', '/archives/'].indexOf(path) != -1) {

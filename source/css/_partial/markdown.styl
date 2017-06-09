@@ -1,5 +1,8 @@
 .markdown-content
   overflow: auto
+  pre, code
+    font-family: 'Roboto Mono', Monaco, courier, monospace
+    font-size: 0.8em
   p
     line-height: 1.6em
   h1
@@ -30,7 +33,7 @@
     margin: 20px 0
   img
     width: 100%
-    max-width: 500px
+    max-width: 550px
     display: block
     margin: 20px auto
   strong
@@ -42,3 +45,16 @@
     font-size: 13px
     margin: 20px 0
     overflow: auto
+    position: relative
+    &:after
+      content: attr(data-lang)
+      position: absolute
+      top: 0
+      right: 0
+      color: #ccc
+      text-align: right
+      font-size: 0.7em
+      padding: 5px 10px 0
+      line-height: 15px
+      height: 15px
+      font-weight: 600
