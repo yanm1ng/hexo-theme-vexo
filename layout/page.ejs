@@ -1,6 +1,6 @@
 <div id="article-banner">
   <h2><%- page.title %></h2>
-  <p class="post-date"><%-date(page.date, "YYYY-MM-DD")%></p>
+  <p class="post-date"><%- date(page.date, "YYYY-MM-DD") %></p>
 </div>
 <main class="app-body">
   <article class="post-article">
@@ -16,11 +16,11 @@
         赏
         <span class="money-code">
           <span class="alipay-code">
-            <img src="./images/alipay.jpg" />
+            <div class="code-image"></div>
             <b>使用支付宝打赏</b>
           </span>
           <span class="wechat-code">
-            <img src="./images/wechat.jpg" />
+            <div class="code-image"></div>
             <b>使用微信打赏</b>
           </span>
         </span>
