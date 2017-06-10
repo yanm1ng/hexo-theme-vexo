@@ -11,9 +11,25 @@
         <%- partial('_partial/tag', { tags: page.tags }) %>
       </div>
     <% } %>
+    <div class="money-like">
+      <div class="reward-btn">
+        赏
+        <span class="money-code">
+          <span class="alipay-code">
+            <img src="./images/alipay.jpg" />
+            <b>使用支付宝打赏</b>
+          </span>
+          <span class="wechat-code">
+            <img src="./images/wechat.jpg" />
+            <b>使用微信打赏</b>
+          </span>
+        </span>
+      </div>
+      <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
+    </div>
     <div class="qrcode">
       <canvas id="share-qrcode"></canvas>
-      <p>扫描二维码，分享此文章</p>
+      <p class="notice">扫描二维码，分享此文章</p>
     </div>
     <div id="comments"></div>
   </article>

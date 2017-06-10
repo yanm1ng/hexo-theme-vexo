@@ -49,7 +49,7 @@ pre
   white-space: nowrap
 
 .article-card
-  padding-bottom: 30px
+  padding-bottom: 20px
   &:first-child
     margin-top: 80px
 
@@ -103,18 +103,76 @@ h2.article-head
   @media m-mobile
     margin-top: 0
 
+.money-like
+  padding: 2rem 0 3rem
+  .reward-btn
+    cursor: pointer
+    font-size: 1.6rem
+    line-height: 3.2rem
+    position: relative
+    display: block
+    width: 3.2rem
+    height: 3.2rem
+    margin: 0 auto
+    padding: 0
+    text-align: center
+    vertical-align: middle
+    color: color-white
+    border: 1px solid #f1b60e
+    border-radius: 50%
+    background: linear-gradient(to bottom, #fccd60 0, #fbae12 100%, #2989d8 100%, #207cca 100%)
+  .money-code
+    position: absolute
+    top: -11.5rem
+    left: 50%
+    display: none
+    width: 16rem
+    height: 9rem
+    margin-left: -9rem
+    padding: 10px 15px
+    border: 1px solid color-border
+    background: color-white
+    box-shadow: 0 1px 1px 1px color-border
+    border-radius: 4px
+    span
+      display: inline-block
+      width: 7rem
+      height: 10rem
+    .alipay-code
+      float: left
+    .wechat-code
+      float: right
+    b
+      font-size: 12px
+      display: block
+      margin: 0
+      text-align: center
+      color: color-dark
+    img
+      display: inline-block
+      float: left
+      width: 7rem
+      width: 7rem
+      margin: 0 auto
+      border: 0
+
+.notice
+  font-size: 12px
+  display: block
+  margin-top: 10px
+  text-align: center
+  color: color-gray
+  font-style: italic
+
 .qrcode
-  padding: 30px 0
+  padding-bottom: 30px
   text-align: center
   border-bottom: 1px dashed color-border
   canvas
+    width: 8rem
+    height: 8rem
     padding: 5px
     box-shadow: 0 0 1px color-shadow
-  p
-    font-size: 12px
-    display: block
-    text-align: center
-    color: color-gray
 
 .scroll-top
   cursor: pointer
@@ -122,7 +180,7 @@ h2.article-head
   position: fixed
   box-sizing: border-box
   right: 2em
-  bottom: 100px
+  bottom: 45px
   width: 40px
   height: 40px
   padding: 5px

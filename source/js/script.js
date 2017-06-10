@@ -22,12 +22,16 @@
     $('html,body').animate({ scrollTop: maoH - header.height() }, 500);
   })
 
+  $('.reward-btn').on('click', function() {
+    $('.money-code').fadeToggle()
+  })
+
   top.on('click', function() {
     $('html,body').animate({ scrollTop: 0 }, 600);
   })
-  
-  if (['/', '/archives/'].indexOf(path) != -1) {
-    header.addClass('fixed-header')
+
+  if (['/tags/'].indexOf(path) != -1 || header.data('ispost')) {
+    header.removeClass('fixed-header')
   }
 
   document.addEventListener('scroll', function() {
