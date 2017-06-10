@@ -1,16 +1,16 @@
-## Vexo
+# Vexo
 
 > Vexo is a Hexo theme inspired by Vue's official website.
 
-#### Intro
+## Intro
 
 ![](http://ww1.sinaimg.cn/large/006tKfTcgy1fggf5kinjcj30m80dwact.jpg)
 
-#### Demo
+## Demo
 
 [Live Example](http://yanm1ng.cn/hexo-theme-vexo/)
 
-#### Features
+## Features
 
 * Fully Responsive
 * Baidu Analytics
@@ -20,7 +20,7 @@
 * SEO
 * Immersive Status Bar
 
-#### Install
+## Install
 
 1. Download this theme into your project
 
@@ -44,7 +44,7 @@
 
 4. That's all , hope you will like :)
 
-#### Post
+## Post
 
 The **front-matter** of a post looks like that:
 
@@ -58,7 +58,7 @@ tags:
 ---
 ```
 
-#### Comment
+## Comment
 
 Vexo use [Gitment](https://github.com/imsun/gitment) as the third party discussion system.
 
@@ -74,11 +74,11 @@ gitment_oauth_secret:
 
 How to use Gitment ? [See]([https://imsun.github.io/gitment/](https://imsun.github.io/gitment/))
 
-#### About
+## About
 
 - Give a star if you like , fork or just clone to use , and also you can help me fix bugs and add new feature :)
 - If you have any problem or requirement , just open an issue here and i will help you.
 - Thanks to [imsun](https://github.com/imsun) , [Evan You](https://github.com/yyx990803) and [Hexo](https://hexo.io).
 
-#### LICENSE
+## LICENSE
 MIT
