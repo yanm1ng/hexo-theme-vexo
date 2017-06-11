@@ -1,6 +1,6 @@
-# Vexo
+# Vexo = Vue.js Style + Hexo
 
-> Vexo is a Hexo theme inspired by Vue's official website.
+> Vexo is a Hexo theme inspired by [Vue.js](https://cn.vuejs.org) official website.
 
 ## Intro
 
@@ -58,6 +58,14 @@ tags:
 ---
 ```
 
+## Change Log  
+
+**2017-06-11**
+* Add archive page
+* Fixed HighLight code line-number bug
+* Adjust home post image width
+* Thanks @ky0ncheng issue 
+
 ## Comment
 
 Vexo use [Gitment](https://github.com/imsun/gitment) as the third party discussion system.
@@ -72,13 +80,13 @@ gitment_oauth_id:
 gitment_oauth_secret: 
 ```
 
-How to use Gitment ? [See]([https://imsun.github.io/gitment/](https://imsun.github.io/gitment/))
+How to use Gitment ? [See](https://imsun.github.io/gitment/)
 
 ## About
 
 - Give a star if you like , fork or just clone to use , and also you can help me fix bugs and add new feature :)
 - If you have any problem or requirement , just open an issue here and i will help you.
-- Thanks to [imsun](https://github.com/imsun) , [Evan You](https://github.com/yyx990803) and [Hexo](https://hexo.io).
+- Thanks to [@imsun](https://github.com/imsun) , [@Evan You](https://github.com/yyx990803) and [@Hexo](https://hexo.io).
 
 ## LICENSE
 MIT
