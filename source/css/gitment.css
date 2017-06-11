@@ -1145,9 +1145,6 @@ a.gitment-editor-footer-tip:hover {
   border-bottom-color: #eee;
 }
 @media screen and (max-width: 420px) {
-  .article-summary {
-    font-size: 14px;
-  }
   .gitment-editor-tab:last-child {
     display: none;
   }
