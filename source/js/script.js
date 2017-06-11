@@ -30,7 +30,7 @@
     $('html,body').animate({ scrollTop: 0 }, 600);
   })
 
-  if (['/tags/'].indexOf(path) != -1 || header.data('ispost')) {
+  if (['/tags/', '/archives/'].indexOf(path) != -1 || header.data('ispost')) {
     header.removeClass('fixed-header')
   }
 

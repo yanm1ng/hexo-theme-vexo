@@ -1,0 +1,49 @@
+#archives
+  &:before
+    position: absolute
+    top: 2em
+    bottom: 1em
+    left: 30px
+    height: auto
+    content: ''
+    background-color:color-primary
+    width: 4px
+.time-section
+  padding-left: 30px
+  position: relative
+  .section-year
+    cursor: pointer
+    font-size: 1.8em
+    margin-left: 10px
+    &:before
+      position: absolute
+      left: 8px
+      top: 11px
+      content: ''
+      background-color: color-white
+      width: 12px
+      height: 12px
+      border: 2px solid color-primary
+      border-radius: 50%
+  .section-list
+    .section-list-item
+      margin: 20px 0 20px 10px
+      position: relative
+      &:before
+        position: absolute
+        left: -29px
+        top: 7px
+        content: ''
+        background-color: color-primary
+        width: 10px
+        height: 10px
+        border-radius: 50%
+      .archive-title
+        color: color-dark
+        transition: all .3s ease
+        &:hover
+          color: color-primary
+      .archive-date
+        color: color-gray
+        font-size: 12px
+        margin: 5px 0
