@@ -26,7 +26,9 @@ pre
   height: 100%
   max-width: 750px
   position: relative
-  transition: opacity .2s
+  opacity: 0
+  transform: translateY(-20px)
+  transition: all 0.4s
 
 .hljs
   background: none !important
@@ -78,23 +80,52 @@ h2.article-head
 #article-banner
   width: 100%
   box-sizing: border-box
-  top: 0;
+  top: 0
   left: 0
-  padding: 80px 20px 20px 20px
-  text-align: center;
+  padding: 80px 20px 25px 20px
+  text-align: center
+  position: relative
   @media m-mobile
-    padding: 80px 10px 20px 10px
+    padding: 80px 10px 25px 10px
   h2
     margin: .4em 0
     font-size: 40px
     color: color-white
-    text-shadow: 0 0 40px color-dark;
+    text-shadow: 0 0 40px color-dark
+    opacity: 0
+    transform: translateY(-20px)
+    transition: all 0.4s
     @media m-mobile
       font-size: 30px
   .post-date
-    font-size: 12px
-    margin: 10px 0
+    font-size: 14px
+    margin: 10px 0 20px 0
     color: color-white
+    opacity: 0
+    transform: translateY(-20px)
+    transition: all 0.4s
+    transition-delay: 0.05s
+  .arrow-down
+    display: flex
+    width: 100%
+    justify-content: center
+    opacity: 0
+    transform: translateY(-20px)
+    transition: all 0.4s
+    transition-delay: 0.1s
+    a
+      z-index: 4
+      display: block
+      width: 25px
+      height: 25px
+      -webkit-transform: rotate(315deg)
+      transform: rotate(315deg)
+      -webkit-animation-name: shine
+      -webkit-animation-duration: 1.5s
+      -webkit-animation-iteration-count: infinite
+      animation-iteration-count: infinite
+      border-bottom: 1px solid color-white
+      border-left: 1px solid color-white
 
 .post-article
   margin-top: 20px
@@ -206,6 +237,14 @@ h2.article-head
 
 .opacity
   opacity: 1
+
+@keyframes shine
+  0%, 100%
+    opacity: .1
+  25%, 75%
+    opacity: .2
+  50%
+    opacity: 1
 
 @import "_partial/header"
 @import "_partial/footer"

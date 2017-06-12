@@ -1,10 +1,22 @@
 (function($){
-
+  var app = $('.app-body')
   var header = $('.header')
   var banner = document.getElementById('article-banner') || false
   var top = $('.scroll-top')
   var path = window.location.pathname
   var isOpen = false
+
+  $(document).ready(function(){
+    var fade = {
+      transform: 'translateY(0)',
+      opacity: 1
+    }
+    if (banner) {
+      app.css('transition-delay', '0.15s')
+      $('#article-banner').children().css(fade)
+    }
+    app.css(fade)
+  })
 
   $('.menu').on('click', function() {
     if (!header.hasClass('fixed-header') || isOpen) {
@@ -26,13 +38,13 @@
     $('.money-code').fadeToggle()
   })
 
+  $('.arrow-down').on('click', function() {
+    $('html,body').animate({ scrollTop: banner.offsetHeight - header.height() }, 500);
+  })
+
   top.on('click', function() {
     $('html,body').animate({ scrollTop: 0 }, 600);
   })
-
-  if (['/tags/', '/archives/'].indexOf(path) != -1 || header.data('ispost')) {
-    header.removeClass('fixed-header')
-  }
 
   document.addEventListener('scroll', function() {
     var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
@@ -40,7 +52,7 @@
     if (banner) {
       if (scrollTop > headerH) {
         header.addClass('fixed-header')
-      } else {
+      } else if (scrollTop == 0){
         header.removeClass('fixed-header')
       }
     }

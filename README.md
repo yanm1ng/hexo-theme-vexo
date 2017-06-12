@@ -44,6 +44,13 @@
 
 4. That's all , hope you will like :)
 
+## Update
+
+```
+cd themes/vexo
+git pull
+```
+
 ## Post
 
 The **front-matter** of a post looks like that:
@@ -63,8 +70,8 @@ tags:
 **2017-06-11**
 * Add archive page
 * Fixed HighLight code line-number bug
-* Adjust home post image width
-* Thanks @ky0ncheng issue 
+* Adjust home post display problem
+* Thanks @ky0ncheng issue
 
 ## Comment
 
@@ -81,6 +88,12 @@ gitment_oauth_secret:
 ```
 
 How to use Gitment ? [See](https://imsun.github.io/gitment/)
+
+## Reward
+
+You can replace your own Alipay/Wechat qrcode in `themes/source/css/images` 
+
+Here the name must same as `alipay.jpg` or `wechat.jpg`.
 
 ## About
 
