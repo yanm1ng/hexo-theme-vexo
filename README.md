@@ -67,6 +67,10 @@ tags:
 
 ## Change Log  
 
+**2017-06-12**  
+* Add enter-out transition
+* Fixed bugs
+
 **2017-06-11**
 * Add archive page
 * Fixed HighLight code line-number bug
