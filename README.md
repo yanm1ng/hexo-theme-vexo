@@ -4,7 +4,7 @@
 
 ## Intro
 
-![](http://ww1.sinaimg.cn/large/006tKfTcgy1fggf5kinjcj30m80dwact.jpg)
+![](http://file.muyutech.com/vexo.png)
 
 ## Demo
 
