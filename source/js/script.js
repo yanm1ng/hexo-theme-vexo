@@ -6,7 +6,7 @@
   var path = window.location.pathname
   var isOpen = false
 
-  $(document).ready(function(){
+  $(document).ready(function() {
     var fade = {
       transform: 'translateY(0)',
       opacity: 1

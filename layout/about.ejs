@@ -1,0 +1,22 @@
+<div id="about-banner" style="background-image: url(<%- theme.about.banner %>)"></div>
+<div class="author">
+  <div class="head">
+    <img src="<%- theme.about.avatar %>" />
+  </div>
+  <h3><%- config.author %></h3>
+  <p class="discription"><%- theme.about.description %></p>
+</div>
+
+<script>
+  (function () {
+    $('.header').removeClass('fixed-header')
+    var windowH = $(window).height();
+    var author = $('.author')
+    var bodyH = author.offset().top + author[0].offsetHeight + 71;
+    if (bodyH < windowH) {
+      author.css({
+        'margin-bottom': windowH - bodyH
+      })
+    }
+  })();
+</script>
