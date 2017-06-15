@@ -67,6 +67,11 @@ tags:
 
 ## Change Log  
 
+**2017-06-15**  
+* Add personal about page
+* Replace font-family
+* Fixed bugs
+
 **2017-06-12**  
 * Add enter-out transition
 * Fixed bugs

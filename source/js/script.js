@@ -2,6 +2,7 @@
   var app = $('.app-body')
   var header = $('.header')
   var banner = document.getElementById('article-banner') || false
+  var about = document.getElementById('about-banner') || false
   var top = $('.scroll-top')
   var path = window.location.pathname
   var isOpen = false
@@ -14,6 +15,9 @@
     if (banner) {
       app.css('transition-delay', '0.15s')
       $('#article-banner').children().css(fade)
+    }
+    if (about) {
+      $('.author').children().css(fade)
     }
     app.css(fade)
   })
