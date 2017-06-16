@@ -69,12 +69,12 @@ tags:
 
 **2017-06-15**  
 * Add personal about page
-* Replace font-family
-* Fixed bugs
+* Replace font-family
+* Fixed bugs
 
 **2017-06-12**  
 * Add enter-out transition
-* Fixed bugs
+* Fixed bugs
 
 **2017-06-11**
 * Add archive page
