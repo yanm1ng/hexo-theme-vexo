@@ -70,6 +70,7 @@ tags:
 **2017-06-15**  
 * Add personal about page
 * Replace font-family
+* Ignore text-autosizer/font-boosting on mobile-device
 * Fixed bugs
 
 **2017-06-12**  
