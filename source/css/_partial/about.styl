@@ -4,7 +4,7 @@
   background-repeat: no-repeat
   background-position: center
   background-size: cover
-  height: 450px
+  height: 350px
   &:after
     position: absolute
     z-index: 180
@@ -21,7 +21,7 @@
     background: url(escheres-url)
     background-color: rgba(0, 0, 0, .05)
   @media m-mobile
-    height: 350px
+    height: 250px
 .author
   margin-top: -50px
   width: 100%
@@ -59,3 +59,24 @@
     transform: translateY(-20px)
     transition: all 0.4s
     transition-delay: 0.1s
+  .share-icons
+    opacity: 0
+    transform: translateY(-20px)
+    transition: all 0.4s
+    transition-delay: 0.15s
+    margin-top: 2em
+    a
+      font-size: 1em
+      display: inline-block
+      margin: 0 .4em
+      &:hover
+        transition: opacity 0.2s
+        opacity: .6
+    .icon-weibo
+      color: #e6162d
+    .icon-github
+      color: #333333
+    .icon-zhihu
+      color: #0767c8
+    .icon-twitter
+      color: #2aa9e0

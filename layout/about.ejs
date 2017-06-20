@@ -5,6 +5,40 @@
   </div>
   <h3><%- config.author %></h3>
   <p class="discription"><%- theme.about.description %></p>
+  <section class="share-icons">
+    <% if (config.weibo_username) { %>
+      <a class="icon-weibo" href="http://weibo.com/<%- config.weibo_username %>" target="_blank">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
+    <% } %>
+    <% if (config.twitter_username) { %>
+      <a class="icon-twitter" href="https://twitter.com/<%- config.twitter_username %>" target="_blank">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
+    <% } %>
+    <% if (config.github_username) { %>
+      <a class="icon-github" href="https://github.com/<%- config.github_username %>" target="_blank">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
+    <% } %>
+    <% if (config.zhihu_username) { %>
+      <a class="icon-zhihu" href="https://www.zhihu.com/people/<%- config.zhihu_username %>" target="_blank">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-stack-1x fa-inverse">知</i>
+        </span>
+      </a>
+    <% } %>
+  </section>
 </div>
 
 <script>
