@@ -1,0 +1,44 @@
+.project-app
+  max-width: 960px
+  min-width: 300px
+  padding: 1em 0
+.card-container
+  margin: 30px auto
+  display: -webkit-flex
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  @media m-pad
+    width: 640px
+  @media screen and (max-width: 650px)
+    width: 320px
+  .project-card
+    width: 320px
+    height: 180px
+    margin-bottom: 20px
+    position: relative
+    .card-wrap
+      box-sizing: border-box
+      height: 100%
+      display: block
+      padding: 20px
+      border: 1px solid color-border
+      border-radius: 4px
+      color: color-dark
+      .card-header
+        position: absolute
+        width: 100%
+        height: 20px
+        top: 0
+        left: 0
+      .card-title
+        margin-top: 10px
+        margin-bottom: 5px
+        font-size: 1.2em
+      .card-footer
+        box-sizing: border-box
+        position: absolute
+        width: 100%
+        padding: 0 20px
+        bottom: 20px
+        left: 0
