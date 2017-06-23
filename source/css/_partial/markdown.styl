@@ -17,7 +17,7 @@
       border-radius: 2px
       white-space: nowrap
   h1
-    font-size: 1.6em
+    font-size: 1.8em
   h2
     font-size: 1.5em
   h3
@@ -44,7 +44,7 @@
     background: color-background
     border-bottom-right-radius: 2px
     border-top-right-radius: 2px
-  ul
+  ul, ol
     overflow: auto
     margin: 15px 0
     li
@@ -72,3 +72,25 @@
       line-height: 15px
       height: 15px
       font-weight: 600
+  > table
+    width: 100%
+    thead
+      background-color: color-primary
+      border-top-width: 1px
+      border-top-style: solid
+      border-top-color: color-border
+      th
+        padding: 5px 10px
+        color: color-white
+    tbody
+      tr
+        &:nth-child(even)
+          background: #e6eed6
+        &:nth-child(odd)
+          background: color-white
+        td
+          padding: 5px 10px
+  hr
+    border: none
+    border-bottom: 1px dashed color-border
+    margin: 30px 0
