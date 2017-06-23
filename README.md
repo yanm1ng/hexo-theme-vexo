@@ -66,6 +66,9 @@ tags:
 ```
 
 ## Change Log  
+**2017-06-20** 
+* Add project page to show github project
+* Fixed share url error
 
 **2017-06-20**  
 * Add personal link icons, support: 
