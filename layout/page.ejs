@@ -46,7 +46,7 @@
 
     var qr = new QRious({
       element: document.getElementById('share-qrcode'),
-      value: url
+      value: document.location.href
     });
     
     var gitmentConfig = "<%= theme['gitment_owner'] %>";

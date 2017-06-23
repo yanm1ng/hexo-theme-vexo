@@ -4,24 +4,6 @@
 </div>
 <main class="app-body project-app">
   <div class="card-container" id="all-project">
-    <section class="project-card">
-      <a class="card-wrap">
-        <div class="card-header"></div>
-        <h3 class="card-title">hexo-theme-vexo</h3>
-        <p class="card-description">🍟 Vexo is a Hexo theme inspired by Vue's official website.</p>
-        <div class="card-footer">
-          <i class="fa fa-star"></i>
-          <i class="fa fa-code-fork"></i>
-          <i class="fa fa-clock-o"></i>
-        </div>
-      </a>
-    </section>
-    <section class="project-card">
-      <a class="card-wrap"></a>
-    </section>
-    <section class="project-card">
-      <a class="card-wrap"></a>
-    </section>
   </div>
 </main>
 <script>
@@ -39,24 +21,26 @@
         var repos = data.sort(function(a, b) {
           return (b.stargazers_count - a.stargazers_count)
         }).slice(0, 6)
-        console.log(repos)
         var cardHtml = repos.map(function(item) {
           return (
             '<section class="project-card">' + 
               '<a class="card-wrap">' +
-                '<div class="card-header"></div>' +
+                '<div class="card-header" data-name="'+ item.name +'"></div>' +
                 '<h3 class="card-title">' + item.name + '</h3>' +
                 '<p class="card-description">' + item.description + '</p>' +
                 '<div class="card-footer">' +
-                  '<i class="fa fa-star"></i>' +
-                  '<i class="fa fa-code-fork"></i>' +
-                  '<i class="fa fa-clock-o"></i>' +
+                  '<span><i class="fa fa-star"></i>'+ item.stargazers_count +'</span>' +
+                  '<span><i class="fa fa-code-fork"></i>' + item.forks_count +'</span>' +
                 '</div>' +
               '</a>' +
             '</section>'
           )
         }).join('')
         $('#all-project').html(cardHtml)
+        $('.card-header').each(function() {
+          var name = $(this).data('name');
+          $(this).geopattern(name);
+        })
       }
     });
   })()
