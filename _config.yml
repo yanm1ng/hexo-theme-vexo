@@ -1,6 +1,6 @@
 author: yanm1ng # 作者
 description: yanm1ng's blog
-keyword: # seo keyword
+keyword: hexo-theme, vuejs
 
 excerpt_link: Read more
 
@@ -8,7 +8,7 @@ menu:
  Home: /
  Tags: /tags/
  Archives: /archives/
- Github: https://github.com/yanm1ng
+ Projects: /project/
  About: /about/
 
 # highlight
@@ -25,5 +25,5 @@ baidu_id:
 
 about: 
   banner: http://file.muyutech.com/about.jpg
-  avatar: https://yanm1ng.github.io/static/img/logo.png
+  avatar: https://avatars3.githubusercontent.com/u/16443628?v=3&s=460
   description: The end is always near.
