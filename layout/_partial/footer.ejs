@@ -29,7 +29,7 @@
       if (hasLine == 'false') {
         figure.find('.gutter').hide();
       }
-      var lang = figure.attr('class').split(' ')[1] || '';
+      var lang = figure.attr('class').split(' ')[1] || 'code';
       var codeHtml = $(this).html();
       var codeTag = document.createElement('code');
       codeTag.className = lang;

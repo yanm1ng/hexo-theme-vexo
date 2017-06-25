@@ -68,6 +68,7 @@ tags:
 ## Change Log  
 **2017-06-25** 
 * Image load `onerror` replace default image
+* Added page [loading-bar](https://github.com/rstacruz/nprogress)
 * Fixed bugs
 
 **2017-06-23** 

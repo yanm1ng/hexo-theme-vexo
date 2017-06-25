@@ -1,4 +1,5 @@
 (function($){
+  console.log('© Theme-Vexo | https://github.com/yanm1ng/hexo-theme-vexo')
   var app = $('.app-body')
   var header = $('.header')
   var banner = document.getElementById('article-banner') || false
@@ -8,6 +9,12 @@
   var isOpen = false
 
   $(document).ready(function() {
+    NProgress.start();
+    $('#nprogress .bar').css({
+      'background': '#42b983'
+    });
+    $('#nprogress .spinner').hide()
+    
     var fade = {
       transform: 'translateY(0)',
       opacity: 1
@@ -21,6 +28,12 @@
     }
     app.css(fade)
   })
+
+  window.onload = function() {
+    setTimeout(function() {
+      NProgress.done();
+    }, 200)
+  };
 
   $('.menu').on('click', function() {
     if (!header.hasClass('fixed-header') || isOpen) {
