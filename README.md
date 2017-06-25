@@ -66,6 +66,10 @@ tags:
 ```
 
 ## Change Log  
+**2017-06-25** 
+* Image load `onerror` replace default image
+* Fixed bugs
+
 **2017-06-23** 
 * Add project page to show github project
 * Fixed share url error

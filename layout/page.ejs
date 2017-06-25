@@ -41,14 +41,21 @@
 <script>
   (function () {
     var url = '<%= config.url %>/<%= page.path %>';
-    $('#article-banner').geopattern(url);
-    $('.header').removeClass('fixed-header');
+    $('#article-banner').geopattern(url)
+    $('.header').removeClass('fixed-header')
 
+     // error image
+    $(".markdown-content img").on('error', function() {
+      $(this).attr('src', 'http://yanm1ng.cn/error-img.png') 
+    })
+
+    // qrcode
     var qr = new QRious({
       element: document.getElementById('share-qrcode'),
       value: document.location.href
     });
-    
+
+    // gitment
     var gitmentConfig = "<%= theme['gitment_owner'] %>";
     if (gitmentConfig != "undefined") {
       var gitment = new Gitment({
