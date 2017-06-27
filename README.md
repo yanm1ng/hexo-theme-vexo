@@ -66,18 +66,22 @@ tags:
 ```
 
 ## Change Log  
-**2017-06-25** 
-* Image load `onerror` replace default image
+**2017-06-27** 
+* Added image-zoom
+* Added project-link
+
+**2017-06-25**
+* Added image load `onerror` replace default image
 * Added page [loading-bar](https://github.com/rstacruz/nprogress)
 * Fixed bugs
 
 **2017-06-23** 
-* Add project page to show github project
+* Added project page to show github project
 * Fixed share url error
 * Support markdown `table` & `hr`
 
 **2017-06-20**  
-* Add personal link icons, support: 
+* Added personal link icons, support: 
   * github 
   * zhihu 
   * twitter 
@@ -91,11 +95,11 @@ tags:
 * Fixed bugs
 
 **2017-06-12**  
-* Add enter-out transition
+* Added enter-out transition
 * Fixed bugs
 
 **2017-06-11**
-* Add archive page
+* Added archive page
 * Fixed HighLight code line-number bug
 * Adjust home post display problem
 * Thanks @ky0ncheng issue

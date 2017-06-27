@@ -225,6 +225,24 @@ h2.article-head
     padding: 5px
     box-shadow: 0 0 1px color-shadow
 
+.image-view-wrap
+  position: fixed
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  z-index: 1000
+  transition: all 0.3s ease-in-out
+  .image-view-inner
+    position: relative
+  img
+    display: block
+    margin: 0 auto
+    cursor: zoom-out
+    transition: all 0.3s ease-in-out
+.wrap-active
+  background-color: rgba(255, 255, 255, .9)
+
 .scroll-top
   cursor: pointer
   opacity: 0
