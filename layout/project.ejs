@@ -24,7 +24,7 @@
         var cardHtml = repos.map(function(item) {
           return (
             '<section class="project-card">' + 
-              '<a class="card-wrap">' +
+              '<a class="card-wrap"  href="'+ item.html_url +'">' +
                 '<div class="card-header" data-name="'+ item.name +'"></div>' +
                 '<h3 class="card-title">' + item.name + '</h3>' +
                 '<p class="card-description">' + item.description + '</p>' +
