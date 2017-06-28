@@ -8,7 +8,7 @@
 
 ## Demo
 
-[Live Example](http://yanm1ng.cn/hexo-theme-vexo/)
+[Live Example](https://yanm1ng.github.io/)
 
 ## Features
 
