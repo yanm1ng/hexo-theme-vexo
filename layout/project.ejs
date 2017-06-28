@@ -22,12 +22,16 @@
           return (b.stargazers_count - a.stargazers_count)
         }).slice(0, 6)
         var cardHtml = repos.map(function(item) {
+          var description = item.description
+          if (description.replace(/[\u0391-\uFFE5]/g, "aa").length > 72) {
+            description = description.slice(0, 72) + '...'
+          }
           return (
             '<section class="project-card">' + 
               '<a class="card-wrap" href="'+ item.html_url +'" target="_blank">' +
                 '<div class="card-header" data-name="'+ item.name +'"></div>' +
                 '<h3 class="card-title">' + item.name + '</h3>' +
-                '<p class="card-description">' + item.description + '</p>' +
+                '<p class="card-description">' + description + '</p>' +
                 '<div class="card-footer">' +
                   '<span><i class="fa fa-star"></i>'+ item.stargazers_count +'</span>' +
                   '<span><i class="fa fa-code-fork"></i>' + item.forks_count +'</span>' +
