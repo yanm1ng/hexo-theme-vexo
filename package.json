@@ -24,6 +24,17 @@
   "devDependencies": {
     "ejs-lint": "^0.2.0",
     "eslint": "^3.14.0",
-    "eslint-plugin-import": "^2.2.0"
+    "eslint-plugin-import": "^2.2.0",
+    "standard": "^10.0.2"
+  },
+  "standard": {
+    "globals": [
+      "jQuery",
+      "NProgress"
+    ],
+    "ignore": [
+      "source/js/gitment.js",
+      "source/js/qrious.js"
+    ]
   }
 }
