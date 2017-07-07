@@ -7,7 +7,7 @@ for f in $(find ./layout -name "*.ejs"); do
 done
 
 # Lint JS files
-for f in $(find ./source/js -name "*.js"); do
-  echo $f;
-  node_modules/.bin/eslint $f;
-done
+# for f in $(find ./source/js -name "*.js" -iname "gitment.js" ! -iname "qrious.js"); do
+#   echo $f;
+#   node_modules/.bin/eslint $f; 
+# done

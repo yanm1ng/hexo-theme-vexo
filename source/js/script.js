@@ -9,10 +9,10 @@
   var isOpen = false
 
   $(document).ready(function() {
-    NProgress.start();
+    NProgress.start()
     $('#nprogress .bar').css({
       'background': '#42b983'
-    });
+    })
     $('#nprogress .spinner').hide()
     
     var fade = {
@@ -31,9 +31,9 @@
 
   window.onload = function() {
     setTimeout(function() {
-      NProgress.done();
+      NProgress.done()
     }, 200)
-  };
+  }
 
   $('.menu').on('click', function() {
     if (!header.hasClass('fixed-header') || isOpen) {
@@ -48,7 +48,7 @@
     var name = $(this).data('name')
     var maoH = list.find('#' + name).offset().top
 
-    $('html,body').animate({ scrollTop: maoH - header.height() }, 500);
+    $('html,body').animate({ scrollTop: maoH - header.height() }, 500)
   })
 
   $('.reward-btn').on('click', function() {
@@ -56,15 +56,15 @@
   })
 
   $('.arrow-down').on('click', function() {
-    $('html,body').animate({ scrollTop: banner.offsetHeight - header.height() }, 500);
+    $('html,body').animate({ scrollTop: banner.offsetHeight - header.height() }, 500)
   })
 
   top.on('click', function() {
-    $('html,body').animate({ scrollTop: 0 }, 600);
+    $('html,body').animate({ scrollTop: 0 }, 600)
   })
 
   document.addEventListener('scroll', function() {
-    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop
     var headerH = header.height()
     if (banner) {
       if (scrollTop > headerH) {
@@ -78,6 +78,6 @@
     } else {
       top.removeClass('opacity')
     }
-  });
+  })
 
-})(jQuery);
+})(jQuery)
