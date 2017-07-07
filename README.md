@@ -1,6 +1,8 @@
-# Vexo = Vue.js Style + Hexo
+# Vexo = Vue.js Style + Hexo 
 
 > Vexo is a Hexo theme inspired by [Vue.js](https://cn.vuejs.org) official website.
+
+[![Build Status](https://travis-ci.org/yanm1ng/hexo-theme-vexo.svg?branch=master)](https://travis-ci.org/yanm1ng/hexo-theme-vexo)
 
 ## Intro
 
