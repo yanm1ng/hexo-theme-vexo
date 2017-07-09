@@ -34,7 +34,14 @@
       <canvas id="share-qrcode"></canvas>
       <p class="notice">扫描二维码，分享此文章</p>
     </div>
-    <div id="comments"></div>
+    <% if (theme.gitment_owner) { %>
+      <div id="comments"></div>
+    <% } else { %>
+      <!-- UY BEGIN -->
+      <div id="uyan_frame"></div>
+      <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js"></script>
+      <!-- UY END -->
+    <% } %>
   </article>
 </main>
 
