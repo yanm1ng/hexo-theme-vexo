@@ -4,7 +4,7 @@
       <h2 class="article-head">
         <a href="<%- url_for(post.path) %>"><%- post.title %></a>
       </h2>
-      <p class="article-date"><%-date(post.date, "YYYY-MM-DD")%></p>
+      <p class="article-date"><%- date(post.date, "LL") %></p>
       <% if (post.tags && post.tags.length) { %>
         <%- partial('_partial/tag', { tags: post.tags }) %>
       <% } %>
