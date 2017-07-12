@@ -95,14 +95,11 @@ a.gitment-header-issue-link:hover {
   color: #666;
 }
 
-.gitment-comments-loading {
-  text-align: center;
-  margin: 50px 0;
-}
-
+.gitment-comments-loading,
 .gitment-comments-error,
 .gitment-comments-empty {
-  
+  text-align: center;
+  margin: 50px 0;
 }
 
 .gitment-comments-list {
