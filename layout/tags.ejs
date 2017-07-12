@@ -5,12 +5,12 @@
 <main class="app-body">
   <div id="tag-cloud">
     <% site.tags.map(function(tag, index) { %>
-      <a class="tag<%= Math.round(Math.random() * 3) %>" data-name="tag-<%= index %>"><%= tag.name %></a>
+      <a class="tag<%= Math.round(Math.random() * 3) %>" data-name="tag-<%= tag.name %>"><%= tag.name %></a>
     <% }) %>
   </div>
   <% site.tags.map(function(tag, index){ %>
     <div class="tag-list">
-      <h3 class="tag-name" id="tag-<%= index %>"><%= tag.name %></h3>
+      <h3 class="tag-name" id="tag-<%= tag.name %>"><%= tag.name %></h3>
       <% tag.posts.map(function(post) { %>
         <ul class="tag-preview">
           <li>
@@ -24,8 +24,16 @@
 
 <script>
   (function () {
-    var url = '<%= config.url %>/<%= page.path %>';
-    $('#article-banner').geopattern(url);
+    var url = '<%= config.url %>/<%= page.path %>'
+    $('#article-banner').geopattern(url)
     $('.header').removeClass('fixed-header')
+
+    var tag = location.hash.replace('#', '')
+    if (tag) {
+      var tagId = "#tag-" + tag;
+      $("html, body").animate({
+        scrollTop: $(tagId).offset().top 
+      }, 400)
+    }
   })();
 </script>

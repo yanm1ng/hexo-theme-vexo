@@ -91,6 +91,7 @@
     var gitmentConfig = "<%= theme['gitment_owner'] %>";
     if (gitmentConfig != "undefined") {
       var gitment = new Gitment({
+        id: "<%- page.title %>",
         owner: "<%= theme['gitment_owner'] %>",
         repo: "<%= theme['gitment_repo'] %>",
         oauth: {
