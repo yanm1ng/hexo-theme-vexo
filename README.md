@@ -18,22 +18,22 @@
 
 * Fully Responsive
 * Baidu Analytics
-* Gitment
-* Reward
+* [Youyan](http://www.uyan.cc/)
+* [Gitment](https://imsun.github.io/gitment/)
 * Share Qrcode
 * SEO
 * Immersive Status Bar
 
 ## Install
 
-1. Download this theme into your project
+1. Download/Checkout this theme into your project
 
    ```
    cd your-hexo-folder
 
    git clone https://github.com/yanm1ng/hexo-theme-vexo.git themes/vexo
 
-   cp themes/vexo/_source/* source/
+   cp -R themes/vexo/_source/* source/
    ```
 
 2. Modify `_config.yml` with your own info. look like this
