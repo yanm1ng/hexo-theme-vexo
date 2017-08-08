@@ -48,7 +48,14 @@
 <script>
   (function () {
     var url = '<%= config.url %>/<%= page.path %>';
-    $('#article-banner').geopattern(url)
+    var banner = '<%= page.banner %>'
+    if (banner) {
+      $('#article-banner').css({
+        'background-image': 'url(' + banner + ')'
+      })
+    } else {
+      $('#article-banner').geopattern(url)
+    }
     $('.header').removeClass('fixed-header')
 
      // error image
