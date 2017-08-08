@@ -63,13 +63,20 @@ The **front-matter** of a post looks like that:
 ---
 title: "Hello World"
 date: 2016-06-10 23:00
+banner: http://your-banner-image-link.jpg
 tags:
  - Movies
  - Life
 ---
 ```
 
+Add to top of your article markdown file. 
+
 ## Change Log  
+**2017-08-08**
+* Added article custom banner
+* Fixed gitment error
+
 **2017-06-27** 
 * Added image-zoom
 * Added project-link
