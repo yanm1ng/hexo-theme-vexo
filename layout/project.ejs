@@ -21,7 +21,7 @@
           return (b.stargazers_count - a.stargazers_count)
         }).slice(0, 6)
         var cardHtml = repos.map(function(item) {
-          var description = item.description
+          var description = item.description || ""
           if (description.replace(/[\u0391-\uFFE5]/g, "aa").length > 72) {
             description = description.slice(0, 72) + '...'
           }
