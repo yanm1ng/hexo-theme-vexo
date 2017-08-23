@@ -38,6 +38,14 @@
         </span>
       </a>
     <% } %>
+    <% if (config.douban_username) { %>
+        <a class="icon-douban" href="https://www.douban.com/people/<%- config.douban_username %>" target="_blank">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-stack-1x fa-inverse">豆</i>
+            </span>
+        </a>
+    <% } %>
   </section>
 </div>
 
