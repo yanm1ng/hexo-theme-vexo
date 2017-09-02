@@ -49,7 +49,7 @@
   (function () {
     var url = '<%= config.url %>/<%= page.path %>';
     var banner = '<%= page.banner %>'
-    if (banner) {
+    if (banner !== 'undefined') {
       $('#article-banner').css({
         'background-image': 'url(' + banner + ')'
       })
