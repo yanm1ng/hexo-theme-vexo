@@ -4,7 +4,7 @@
   "description": "Vexo is a Hexo theme inspired by Vue's official website.",
   "scripts": {
     "setup": "npm cache clean && npm install",
-    "test": "bash lint.sh"
+    "lint": "bash lint.sh"
   },
   "repository": {
     "type": "git",
