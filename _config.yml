@@ -16,6 +16,9 @@ menu:
 highlight:
   tomorrow
 
+# donate
+donate: true
+
 # gitment
 gitment_owner: yanm1ng
 gitment_repo: yanm1ng.github.io
