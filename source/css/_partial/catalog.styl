@@ -1,0 +1,31 @@
+#catalog-container
+  display: block
+  flex-shrink: 0
+  @media m-pad
+    display: none
+  .toc-article
+    padding-left: 20px
+    margin-left: 20px
+    border-left: 1px solid color-border
+    .toc-title
+      font-size: 1.2em
+      position: relative
+      padding-left: 28px
+      &:before
+        content: ''
+        position: absolute
+        width: 22px
+        height: 22px
+        left: 0
+        top: 2px
+        background: url(catalog-url) no-repeat
+        background-size: contain
+    .toc-nav
+      padding: 0
+      margin: 1em
+      word-break: keep-all
+    ol
+      padding-left: 20px
+    li
+      list-style-type: none
+      line-height: 1.5

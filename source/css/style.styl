@@ -34,6 +34,12 @@ p
 pre
   overflow-x: auto
 
+.flex-box
+  display: flex
+  display: -ms-flexbox
+  display: -webkit-box
+  display: -webkit-flex
+
 .wechat-share
   width: 0
   height: 0
@@ -43,10 +49,10 @@ pre
     height 400px
 
 .app-body
-  padding: 1em
+  padding: 2em 1em
   margin: 0 auto
   height: 100%
-  max-width: 750px
+  max-width: 980px
   position: relative
   opacity: 0
   transform: translateY(-20px)
@@ -156,9 +162,7 @@ h2.article-head
       border-left: 1px solid color-white
 
 .post-article
-  margin-top: 20px
-  @media m-mobile
-    margin-top: 0
+  margin-top: 0
 
 .money-like
   padding: 2em 0 3em
@@ -269,13 +273,12 @@ h2.article-head
   transform: translate(80px, 0)
   transition: all .3s ease
   box-shadow: 0 0 3px 0 rgba(0,0,0,.12), 0 3px 3px 0 rgba(0,0,0,.24)
-
-.arrow-icon
-  background-image: url(arrow-url)
-  width: 30px
-  height: 30px
-  display: block
-  background-size: contain
+  .arrow-icon
+    background-image: url(arrow-url)
+    width: 30px
+    height: 30px
+    display: block
+    background-size: contain
 
 .opacity
   opacity: 1
@@ -297,3 +300,4 @@ h2.article-head
 @import "_partial/archive"
 @import "_partial/about"
 @import "_partial/project"
+@import "_partial/catalog"
