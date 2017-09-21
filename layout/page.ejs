@@ -6,6 +6,7 @@
   </div>
 </div>
 <main class="app-body flex-box">
+  <!-- Article START -->
   <article class="post-article">
     <section class="markdown-content"><%- page.content %></section>
     <!-- Tags START -->
@@ -53,7 +54,12 @@
       <!-- UY END -->
     <% } %>
   </article>
-  <%- partial('_partial/catalog') %>
+  <!-- Article END -->
+  <!-- Catalog START -->
+  <% if (theme.catalog) { %>
+    <%- partial('_partial/catalog') %>
+  <% } %>
+  <!-- Catalog END -->
 </main>
 
 <script>

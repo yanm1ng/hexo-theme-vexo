@@ -1,12 +1,20 @@
-#catalog-container
+.catalog-container
   display: block
+  margin-left: 20px
+  flex-basis: 280px
+  -webkit-flex-basis: 280px
   flex-shrink: 0
+  -webkit-flex-shrink: 0
   @media m-pad
     display: none
-  .toc-article
+  .fixed-toc
+    position: fixed
+    top: 90px
+  .toc-main
     padding-left: 20px
-    margin-left: 20px
     border-left: 1px solid color-border
+    width: 280px
+    box-sizing: border-box
     .toc-title
       font-size: 1.2em
       position: relative
@@ -22,8 +30,7 @@
         background-size: contain
     .toc-nav
       padding: 0
-      margin: 1em
-      word-break: keep-all
+      margin-top: 1em
     ol
       padding-left: 20px
     li

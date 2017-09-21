@@ -16,6 +16,9 @@ menu:
 highlight:
   tomorrow
 
+# catalog
+catalog: true
+
 # donate
 donate: true
 

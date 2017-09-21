@@ -5,7 +5,7 @@
   var banner = document.getElementById('article-banner') || false
   var about = document.getElementById('about-banner') || false
   var top = $('.scroll-top')
-  var catalog = $('.open-catalog')
+  var catalog = $('.catalog-container .toc-main')
   var isOpen = false
 
   $(document).ready(function () {
@@ -77,6 +77,11 @@
       top.addClass('opacity')
     } else {
       top.removeClass('opacity')
+    }
+    if (scrollTop > 190) {
+      catalog.addClass('fixed-toc')
+    } else {
+      catalog.removeClass('fixed-toc')
     }
   })
 })(jQuery)
