@@ -16,6 +16,12 @@ menu:
 highlight:
   tomorrow
 
+# catalog
+catalog: true
+
+# donate
+donate: true
+
 # gitment
 gitment_owner: yanm1ng
 gitment_repo: yanm1ng.github.io
@@ -31,3 +37,9 @@ about:
   banner: http://file.muyutech.com/about.jpg
   avatar: https://avatars3.githubusercontent.com/u/16443628?v=3&s=460
   description: The end is always near.
+  # Links
+  weibo_username: yanm1ng
+  twitter_username: yanm1ng
+  github_username: yanm1ng
+  zhihu_username: yummy1121
+  douban_username: yanm1ng
