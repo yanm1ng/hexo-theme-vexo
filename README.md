@@ -23,6 +23,7 @@
 * Share Qrcode
 * SEO
 * Immersive Status Bar
+* Article Catalog
 
 ## Install
 
@@ -36,7 +37,7 @@
    cp -R themes/vexo/_source/* source/
    ```
 
-2. Modify `_config.yml` with your own info. look like this
+2. Update project `_config.yml` theme config, look like this
 
    ```
    themes: vexo
@@ -44,11 +45,11 @@
 
    Here theme's name must same as the theme folder name.
 
-3. Or you can copy my theme `_config.yml` into you hexo blog directory , replace default `_config.yml`
+3. Modify theme `themes/vexo/_config.yml` with your own info.
 
 4. That's all , hope you will like :)
 
-## Update
+## Update Version
 
 ```
 cd themes/vexo
@@ -63,16 +64,20 @@ The **front-matter** of a post looks like that:
 ---
 title: "Hello World"
 date: 2016-06-10 23:00
-banner: http://your-banner-image-link.jpg
+banner: your-banner-link.jpg
 tags:
  - Movies
  - Life
 ---
 ```
 
-Add to top of your article markdown file. 
+Add this to the top of your article markdown file. 
 
 ## Change Log  
+**2017-09-21**
+* Added article catalog
+* Fixed bugs
+
 **2017-08-08**
 * Added article custom banner
 * Fixed gitment error
