@@ -43,15 +43,17 @@
       <p class="notice">扫描二维码，分享此文章</p>
     </div>
     <!-- 二维码 END -->
-    <% if (theme.gitment_owner) { %>
+    <% if (theme.comment === 'gitment') { %>
       <!-- Gitment START -->
       <div id="comments"></div>
       <!-- Gitment END -->
-    <% } else { %>
+    <% } else if (theme.comment === 'uyan') { %>
       <!-- UY START -->
       <div id="uyan_frame"></div>
       <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js"></script>
       <!-- UY END -->
+    <% } else { %>
+      <!-- No Comment -->
     <% } %>
   </article>
   <!-- Article END -->
