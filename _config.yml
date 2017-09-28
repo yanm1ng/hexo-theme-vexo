@@ -22,7 +22,12 @@ catalog: true
 # donate
 donate: true
 
-# gitment
+# comment
+# you can set gitment or uyan
+
+comment: gitment
+
+# gitment config
 gitment_owner: yanm1ng
 gitment_repo: yanm1ng.github.io
 gitment_oauth_id: 0f87e490e00ee3fd87ef
