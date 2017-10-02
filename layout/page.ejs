@@ -68,7 +68,7 @@
   (function () {
     var url = '<%= config.url %>/<%= page.path %>';
     var banner = '<%= page.banner %>'
-    if (banner !== 'undefined') {
+    if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
       $('#article-banner').css({
         'background-image': 'url(' + banner + ')'
       })
