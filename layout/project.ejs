@@ -15,7 +15,7 @@
         Accept: 'application/vnd.github.v3.raw'
       },
       type: 'get',
-      url: 'https://api.github.com/users/<%= config.github_username %>/repos',
+      url: 'https://api.github.com/users/<%= theme.about.github_username %>/repos',
       success: function (data) {
         var repos = data.sort(function(a, b) {
           return (b.stargazers_count - a.stargazers_count)
