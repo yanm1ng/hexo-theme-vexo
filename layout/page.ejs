@@ -38,10 +38,12 @@
     <% } %>
     <!-- 打赏 END -->
     <!-- 二维码 START -->
-    <div class="qrcode">
-      <canvas id="share-qrcode"></canvas>
-      <p class="notice">扫描二维码，分享此文章</p>
-    </div>
+    <% if (theme.qrcode) { %>
+      <div class="qrcode">
+        <canvas id="share-qrcode"></canvas>
+        <p class="notice">扫描二维码，分享此文章</p>
+      </div>
+    <% } %>
     <!-- 二维码 END -->
     <% if (theme.comment === 'gitment') { %>
       <!-- Gitment START -->
