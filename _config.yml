@@ -22,6 +22,9 @@ catalog: true
 # donate
 donate: true
 
+# qrcode
+qrcode: true
+
 # comment
 # you can set gitment or uyan
 
