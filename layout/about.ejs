@@ -4,10 +4,14 @@
     <img src="<%- theme.about.avatar %>" />
   </div>
   <h3><%- config.author %></h3>
-  <% for (var i in theme.about.description) { %>
-    <p class="discription">
-    <%- theme.about.description[i] %>
-    </p>
+  <% if (typeof(theme.about.description) === 'object') { %>
+    <% for (var i in theme.about.description) { %>
+      <p class="description">
+        <%- theme.about.description[i] %>
+      </p>
+    <% } %>
+  <% } else { %>
+    <p class="description"><%- theme.about.description %></p>
   <% } %>
   <section class="share-icons">
     <% if (theme.about.weibo_username) { %>
