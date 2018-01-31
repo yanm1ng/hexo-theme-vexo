@@ -41,7 +41,9 @@ baidu_id:
 about: 
   banner: http://file.muyutech.com/about.jpg
   avatar: https://avatars3.githubusercontent.com/u/16443628?v=3&s=460
-  description: The end is always near.
+  description:
+    - "The end is always near."
+    - "The end is always near."
   # Links
   weibo_username: yanm1ng
   twitter_username: yanm1ng
