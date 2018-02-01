@@ -43,18 +43,22 @@
       <p class="notice">扫描二维码，分享此文章</p>
     </div>
     <!-- 二维码 END -->
-    <% if (theme.comment === 'gitment') { %>
-      <!-- Gitment START -->
-      <div id="comments"></div>
-      <!-- Gitment END -->
-    <% } else if (theme.comment === 'uyan') { %>
-      <!-- UY START -->
-      <div id="uyan_frame"></div>
-      <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js"></script>
-      <!-- UY END -->
-    <% } else { %>
-      <!-- No Comment -->
+    <!-- Comment START -->
+    <% if(page.comment !== false) { %>
+      <% if (theme.comment === 'gitment') { %>
+        <!-- Gitment START -->
+        <div id="comments"></div>
+        <!-- Gitment END -->
+      <% } else if (theme.comment === 'uyan') { %>
+        <!-- UY START -->
+        <div id="uyan_frame"></div>
+        <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js"></script>
+        <!-- UY END -->
+      <% } else { %>
+        <!-- No Comment -->
+      <% } %>
     <% } %>
+    <!-- Comment END -->
   </article>
   <!-- Article END -->
   <!-- Catalog START -->
@@ -119,30 +123,34 @@
     });
 
     // gitment
-    var gitmentConfig = "<%= theme['gitment_owner'] %>";
-    if (gitmentConfig !== 'undefined') {
-      var gitment = new Gitment({
-        id: "<%- page.title %>",
-        owner: "<%= theme['gitment_owner'] %>",
-        repo: "<%= theme['gitment_repo'] %>",
-        oauth: {
-          client_id: "<%= theme['gitment_oauth_id'] %>",
-          client_secret: "<%= theme['gitment_oauth_secret'] %>"
-        },
-        theme: {
-          render(state, instance) {
-            const container = document.createElement('div')
-            container.lang = "en-US"
-            container.className = 'gitment-container gitment-root-container'
-            container.appendChild(instance.renderHeader(state, instance))
-            container.appendChild(instance.renderEditor(state, instance))
-            container.appendChild(instance.renderComments(state, instance))
-            container.appendChild(instance.renderFooter(state, instance))
-            return container;
-          }
+    <% if(page.comment !== false) { %>
+      <% if (theme.comment === 'gitment') { %>
+        var gitmentConfig = "<%= theme['gitment_owner'] %>";
+        if (gitmentConfig !== 'undefined') {
+          var gitment = new Gitment({
+            id: "<%- page.title %>",
+            owner: "<%= theme['gitment_owner'] %>",
+            repo: "<%= theme['gitment_repo'] %>",
+            oauth: {
+              client_id: "<%= theme['gitment_oauth_id'] %>",
+              client_secret: "<%= theme['gitment_oauth_secret'] %>"
+            },
+            theme: {
+              render(state, instance) {
+                const container = document.createElement('div')
+                container.lang = "en-US"
+                container.className = 'gitment-container gitment-root-container'
+                container.appendChild(instance.renderHeader(state, instance))
+                container.appendChild(instance.renderEditor(state, instance))
+                container.appendChild(instance.renderComments(state, instance))
+                container.appendChild(instance.renderFooter(state, instance))
+                return container;
+              }
+            }
+          })
+          gitment.render(document.getElementById('comments'))
         }
-      })
-      gitment.render(document.getElementById('comments'))
-    }
+      <% } %>
+    <% } %>
   })();
 </script>
