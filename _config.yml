@@ -50,3 +50,9 @@ about:
   github_username: yanm1ng
   zhihu_username: yummy1121
   douban_username: yanm1ng
+
+# MathJax Support
+mathjax:
+  enable: true
+  per_page: false
+  cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML
