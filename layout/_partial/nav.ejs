@@ -1,22 +1,25 @@
 <% if (page.prev || page.next){ %>
-    <div style="padding-top:10px; margin-top:15px; width:100%; border-top:1px dashed #e5e5e5;">
-        <!-- reverse left and right to put prev and next in a more logic postition -->
-        <!-- 替换左右方向让上一篇下一篇文章的位置更加符合逻辑 -->
-      <% if (page.next){ %>
-        <a href="<%- url_for(page.next.path) %>" style="float:left">
-          <i class="fa fa-chevron-left"></i>
-            <% if (page.next.title){ %>
-              <%= page.next.title %>
-            <% } else { %>
-              (no title)
-            <% } %>
-        </a>
-      <% } %>
-      <% if (page.prev){ %>
-        <a href="<%- url_for(page.prev.path) %>" style="float:right">
+  <div class="nav-container">
+    <!-- reverse left and right to put prev and next in a more logic postition -->
+    <% if (page.next){ %>
+      <a class="nav-left" href="<%- url_for(page.next.path) %>">
+        <span class="nav-arrow">← </span>
+        <% if (page.next.title){ %>
+          <%= page.next.title %>
+        <% } else { %>
+          (untitled)
+        <% } %>
+      </a>
+    <% } %>
+    <% if (page.prev){ %>
+      <a class="nav-right" href="<%- url_for(page.prev.path) %>">
+        <% if (page.prev.title){ %>
           <%= page.prev.title %>
-          <i class="fa fa-chevron-right"></i>
-        </a>
-      <% } %>
-    </div>
+        <% } else { %>
+          (untitled)
+        <% } %>
+        <span class="nav-arrow"> →</span>
+      </a>
+    <% } %>
+  </div>
 <% } %>
