@@ -1,0 +1,25 @@
+<% if (page.prev || page.next){ %>
+  <div class="nav-container">
+    <!-- reverse left and right to put prev and next in a more logic postition -->
+    <% if (page.next){ %>
+      <a class="nav-left" href="<%- url_for(page.next.path) %>">
+        <span class="nav-arrow">← </span>
+        <% if (page.next.title){ %>
+          <%= page.next.title %>
+        <% } else { %>
+          (untitled)
+        <% } %>
+      </a>
+    <% } %>
+    <% if (page.prev){ %>
+      <a class="nav-right" href="<%- url_for(page.prev.path) %>">
+        <% if (page.prev.title){ %>
+          <%= page.prev.title %>
+        <% } else { %>
+          (untitled)
+        <% } %>
+        <span class="nav-arrow"> →</span>
+      </a>
+    <% } %>
+  </div>
+<% } %>
