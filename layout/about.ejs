@@ -38,6 +38,14 @@
         </span>
       </a>
     <% } %>
+    <% if (theme.about.linkedin_username) { %>
+      <a class="icon-linkedin" href="https://www.linkedin.com/in/<%- theme.about.linkedin_username %>" target="_blank">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
+    <% } %>
     <% if (theme.about.zhihu_username) { %>
       <a class="icon-zhihu" href="https://www.zhihu.com/people/<%- theme.about.zhihu_username %>" target="_blank">
         <span class="fa-stack fa-lg">
