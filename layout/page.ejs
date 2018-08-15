@@ -57,6 +57,10 @@
       <div id="uyan_frame"></div>
       <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js"></script>
       <!-- UY END -->
+    <% } else if (theme.comment === 'disqus') { %>
+        <!-- Disqus START -->
+        <div id="disqus_thread"></div>
+        <!-- Disqus END -->
     <% } else { %>
       <!-- No Comment -->
     <% } %>
@@ -149,5 +153,19 @@
       })
       gitment.render(document.getElementById('comments'))
     }
+  })();
+</script>
+
+<script>
+  var disqus_shortname = '<%= theme.disqus_shortname %>';
+  <% if (page.permalink){ %>
+  var disqus_url = '<%= page.permalink %>';
+  <% } %>
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/<% if (page.comments){ %>embed.js<% } else { %>count.js<% } %>';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>
