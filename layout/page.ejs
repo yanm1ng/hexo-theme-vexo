@@ -58,9 +58,9 @@
       <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js"></script>
       <!-- UY END -->
     <% } else if (theme.comment === 'disqus') { %>
-        <!-- Disqus START -->
-        <div id="disqus_thread"></div>
-        <!-- Disqus END -->
+      <!-- Disqus START -->
+      <div id="disqus_thread"></div>
+      <!-- Disqus END -->
     <% } else { %>
       <!-- No Comment -->
     <% } %>
@@ -86,7 +86,7 @@
     }
     $('.header').removeClass('fixed-header')
 
-     // error image
+    // error image
     $(".markdown-content img").on('error', function() {
       $(this).attr('src', 'http://file.muyutech.com/error-img.png')
       $(this).css({
@@ -100,7 +100,7 @@
       if (src !== 'http://file.muyutech.com/error-img.png') {
         var imageW = $(this).width()
         var imageH = $(this).height()
-        
+
         var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
         zoom = zoom < 1 ? 1 : zoom
         zoom = zoom > 2 ? 2 : zoom
@@ -120,14 +120,20 @@
         })
       }
     })
+  })();
+</script>
 
-    // qrcode
+<% if (theme.qrcode) { %>
+  <script>
     var qr = new QRious({
       element: document.getElementById('share-qrcode'),
       value: document.location.href
     });
+  </script>
+<% } %>
 
-    // gitment
+<% if (theme.comment === 'gitment') { %>
+  <script>
     var gitmentConfig = "<%= theme['gitment_owner'] %>";
     if (gitmentConfig !== 'undefined') {
       var gitment = new Gitment({
@@ -153,19 +159,21 @@
       })
       gitment.render(document.getElementById('comments'))
     }
-  })();
-</script>
+  </script>
+<% } %>
 
-<script>
-  var disqus_shortname = '<%= theme.disqus_shortname %>';
-  <% if (page.permalink){ %>
-  var disqus_url = '<%= page.permalink %>';
-  <% } %>
-  (function(){
-    var dsq = document.createElement('script');
-    dsq.type = 'text/javascript';
-    dsq.async = true;
-    dsq.src = '//go.disqus.com/<% if (page.comments){ %>embed.js<% } else { %>count.js<% } %>';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-  })();
-</script>
+<% if (theme.comment === 'disqus') { %>
+  <script>
+    var disqus_shortname = '<%= theme.disqus_shortname %>';
+    <% if (page.permalink){ %>
+    var disqus_url = '<%= page.permalink %>';
+    <% } %>
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//go.disqus.com/<% if (page.comments){ %>embed.js<% } else { %>count.js<% } %>';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+<% } %>
