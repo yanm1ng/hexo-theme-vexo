@@ -1,7 +1,7 @@
 author: yanm1ng # 作者
 description: yanm1ng's blog
 keyword: hexo-theme, vuejs
-favicon:
+favicon: 
 
 excerpt_link: Read more
 
@@ -9,26 +9,26 @@ menu:
  Home: /
  Tags: /tags/
  Archives: /archives/
- # Projects: /project/
- # About: /about/
+ Projects: /project/
+ About: /about/
 
 # highlight
 highlight:
   tomorrow
 
 # catalog
-catalog: false
+catalog: true
 
 # donate
-donate: false
+donate: true
 
 # qrcode
-qrcode: false
+qrcode: true
 
 # comment
 # you can set gitment, uyan or disqus
 
-# comment: gitment
+comment: gitment
 
 # gitment config
 gitment_owner: yanm1ng
@@ -38,12 +38,12 @@ gitment_oauth_secret: 4a9d2b148e7971c2201ad12131ce8bf8159ccd2e
 
 # uyan config
 # if you want to use uyan as your blog comment, plz remove/comment out gitment config
-baidu_id:
+baidu_id: 
 
 # disqus config
-disqus_shortname:
+disqus_shortname: 
 
-about:
+about: 
   banner: http://file.muyutech.com/about.jpg
   avatar: https://avatars3.githubusercontent.com/u/16443628?v=3&s=460
   description: "The end is always near."
