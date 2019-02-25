@@ -4,7 +4,7 @@
   <meta name="description" content="<%= config.description || theme.description %>">
   <meta name="keyword" content="<%= config.keyword || theme.keyword %>">
   <% if (config.favicon || theme.favicon){ %>
-    <link rel="shortcut icon" type="image/ico" href="<%= config.favicon || theme.favicon %>"/> 
+    <link rel="shortcut icon" type="image/ico" href="<%= config.favicon || theme.favicon %>"/>
   <% } else { %>
     <%- favicon_tag('css/images/logo.png') %>
   <% } %>
@@ -25,7 +25,7 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
-  <<% if (theme.qrcode) { %>
+  <% if (theme.qrcode) { %>
     <%- js('js/qrious') %>
   <% } %>
   <% if (theme.comment === 'gitment') { %>
