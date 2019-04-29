@@ -54,6 +54,14 @@
         </span>
       </a>
     <% } %>
+    <% if (theme.about.music163_userid) { %>
+      <a class="icon-music163" href="https://music.163.com/#/user/home?id=<%- theme.about.music163_userid %>" target="_blank">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-music fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
+    <% } %>
     <% if (theme.about.douban_username) { %>
         <a class="icon-douban" href="https://www.douban.com/people/<%- theme.about.douban_username %>" target="_blank">
             <span class="fa-stack fa-lg">

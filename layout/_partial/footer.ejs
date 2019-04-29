@@ -21,16 +21,16 @@
     FastClick.attach(document.body);
   })
 </script>
-
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
 <script>
-  var hasLine = '<%- config.highlight["line_number"] %>';
-  async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js", function(){
+    hljs.configure({ useBR: true })
+      var hasLine = '<%- config.highlight["line_number"] %>';
     $('figure pre').each(function(i, block) {
       var figure = $(this).parents('figure');
       if (hasLine === 'false') {
         figure.find('.gutter').hide();
       }
-      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var lang = $(figure).attr('class').split(' ')[1] || 'code';
       var codeHtml = $(this).html();
       var codeTag = document.createElement('code');
       codeTag.className = lang;
@@ -39,7 +39,6 @@
       figure.attr('data-lang', lang.toUpperCase());
       hljs.highlightBlock(block);
     });
-  })
 </script>
 <!-- Baidu Tongji -->
 <% if (config.ba_track_id) { %>
