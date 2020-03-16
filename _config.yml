@@ -39,7 +39,7 @@ gitment_oauth_secret: 4a9d2b148e7971c2201ad12131ce8bf8159ccd2e
 # uyan config
 # if you want to use uyan as your blog comment, plz remove/comment out gitment config
 baidu_id: 
-
+google_analytics:
 # disqus config
 disqus_shortname: 
 
