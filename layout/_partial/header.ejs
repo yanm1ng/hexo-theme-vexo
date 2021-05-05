@@ -14,6 +14,9 @@
           <% } %>
         </li>
       <% } %>
+      <% if (theme.local_search.enable == true) { %>
+        <%- partial('_partial/search/localsearch_button.ejs') %>
+      <% } %>
     </ul>
     <div class="menu">
       <span class="icon-bar"></span>
@@ -33,5 +36,8 @@
         <% } %>
       </ul>
     </div>
+    <% if (theme.local_search.enable == true) { %>
+      <%- partial('_partial/search/localsearch_view.ejs') %>
+    <% } %>
   </div>
 </header>
