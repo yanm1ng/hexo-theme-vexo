@@ -1,11 +1,11 @@
 <div id="article-banner">
   <h2>Tags</h2>
-  <p class="post-date">标签检索</p>
+  <p class="post-date">Tag Retrieval</p>
 </div>
 <main class="app-body">
   <div id="tag-cloud">
     <% site.tags.map(function(tag, index) { %>
-      <a class="tag<%= Math.round(Math.random() * 3) %>" data-name="tag-<%= tag.name %>"><%= tag.name %></a>
+      <a class="tag<%= Math.round(Math.random()*3) %>" data-name="tag-<%= tag.name %>"><%= tag.name %></a>
     <% }) %>
   </div>
   <% site.tags.map(function(tag, index){ %>
