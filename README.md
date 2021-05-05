@@ -122,11 +122,16 @@ Add this to the top of your article markdown file.
 
 ## Comment
 
+#### 1. Gitment
 Vexo use [Gitment](https://github.com/imsun/gitment) as the third party discussion system.
 
 You can easily complete your comment configuration by just adding your settings into `_config.yml`
 
 ```
+# comment
+# you can set utterances, gitment, uyan or disqus
+comment: gitment
+
 # Gitment
 gitment_owner: yanm1ng
 gitment_repo: yanm1ng.github.io
@@ -134,7 +139,35 @@ gitment_oauth_id:
 gitment_oauth_secret: 
 ```
 
-How to use Gitment ? [See](https://imsun.github.io/gitment/)
+How to use Gitment? [See](https://imsun.github.io/gitment/)
+
+#### 2. Utterances
+
+You can also take [Utterances](https://utteranc.es/) as your comment system. It is a lightweight comments widget built on Github issues. You can easily configure which comment system you use in `_config.yml` of this theme.
+
+```
+# comment
+# you can set utterances, gitment, uyan or disqus
+comment: utterances
+
+# utterances config
+utterances_repo: # GitHubAccount/RepoForUtterances
+utterances_issue_term: pathname 
+utterances_theme: github-light
+```
+
+A simple introduction and guide for Utterances is [Here](https://utteranc.es/).
+
+## Local Search (Search in the blog)
+You can add local search engine in your blog. It requires `hexo-generator-searchdb` which can be installed with `npm install hexo-generator-searchdb`. The full instruction can be found [Here](https://github.com/theme-next/hexo-generator-searchdb).
+
+After installing `hexo-generator-searchdb`, you can enable `local search` in `_config.yml`. It makes the search button visible at the right of the menu bar.
+
+```
+# Local Search Support
+local_search:
+  enable: true
+```
 
 ## Reward
 
