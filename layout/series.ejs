@@ -1,0 +1,53 @@
+<div id="article-banner">
+  <h2>Series</h2>
+  <p class="post-date">Series by Categories</p>
+</div>
+
+<% let categories = {}; %>
+<%
+  site.posts.each(post => {
+    const c = post.categories['data'][0]['name'];
+    if (!categories[c]) {
+      categories[c] = [];
+    }
+    categories[c].push(post);
+  })
+%>
+
+<main class="app-body">
+  <div id="category-cloud">
+      <% for (let category of Object.keys(categories).sort().reverse()) { %>
+        <a class="category<%= Math.round(Math.random()*3) %>" data-name="category-<%= category %>"><%= category %></a>
+      <% } %>
+  </div>
+    
+  <% for (let category of Object.keys(categories).sort().reverse()) { %>
+    <div class="category-list">
+      <h3 class="category-name" id="category-<%= category %>"><%= category %></h3>
+      <% categories[category].reverse().sort((l, r) => r.date - l.date) %>
+      <% categories[category].reverse().forEach(post => { %>
+        <ul class="category-preview">
+          <li>
+            <a href="<%- config.root %><%- post.path %>"><%- post.title || "Untitled" %></a>
+          </li>
+        </ul>
+      <% }) %>
+    </div>
+  <% } %>
+</main>
+
+<script>
+  (function () {
+    var url = '<%= config.url %>/<%= page.path %>'
+    $('#article-banner').geopattern(url)
+    $('.header').removeClass('fixed-header')
+
+    var category = location.hash.replace('#', '')
+    if (category) {
+      var categoryId = "#category-" + category;
+      $("html, body").animate({
+        scrollTop: $(categoryId).offset().top 
+      }, 400)
+    }
+  })();
+</script>
