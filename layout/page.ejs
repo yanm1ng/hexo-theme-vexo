@@ -48,7 +48,17 @@
       </div>
     <% } %>
     <!-- 二维码 END -->
-    <% if (theme.comment === 'gitment') { %>
+    <% if (theme.comment === 'utterances') { %>
+      <!-- Utterances START -->
+      <div id="utterances"></div>
+      <script src="https://utteranc.es/client.js"
+        repo="<%= theme['utterances_repo'] %>"
+        issue-term="<%= theme['utterances_issue_term'] %>"
+        theme="<%= theme['utterances_theme'] %>"
+        crossorigin="anonymous"
+        async></script>    
+      <!-- Utterances END -->
+    <% } else if (theme.comment === 'gitment') { %>
       <!-- Gitment START -->
       <div id="comments"></div>
       <!-- Gitment END -->
@@ -88,7 +98,7 @@
 
     // error image
     $(".markdown-content img").on('error', function() {
-      $(this).attr('src', 'http://file.muyutech.com/error-img.png')
+      $(this).attr('src', '/css/images/error_icon.png')
       $(this).css({
         'cursor': 'default'
       })
@@ -97,7 +107,7 @@
     // zoom image
     $(".markdown-content img").on('click', function() {
       var src = $(this).attr('src')
-      if (src !== 'http://file.muyutech.com/error-img.png') {
+      if (src !== '/css/images/error_icon.png') {
         var imageW = $(this).width()
         var imageH = $(this).height()
 
