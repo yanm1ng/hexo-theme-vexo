@@ -30,6 +30,7 @@
       if (hasLine === 'false') {
         figure.find('.gutter').hide();
       }
+      hljs.configure({useBR: true});
       var lang = figure.attr('class').split(' ')[1] || 'code';
       var codeHtml = $(this).html();
       var codeTag = document.createElement('code');
