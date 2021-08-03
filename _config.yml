@@ -71,7 +71,7 @@ local_search:
 # China Registration
 # e.g. 京ICP备12345678号-1
 icp:
-  enable: true
+  enable: false
   province: 京     # e.g. 京
   province_en: BJ  # e.g. BJ
   number: 12345678 # e.g. 12345678
