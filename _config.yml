@@ -67,3 +67,19 @@ mathjax:
 # Local Search Support
 local_search:
   enable: true
+
+# China Registration
+# e.g. 京ICP备12345678号-1
+icp:
+  enable: true
+  province: 京     # e.g. 京
+  province_en: BJ  # e.g. BJ
+  number: 12345678 # e.g. 12345678
+  sub_number: 1    # e.g. 1
+# e.g. 京公网安备 12345678901234号
+ga:
+  enable: false
+  province: 京           # e.g. 京
+  province_en: BJ        # e.g. BJ
+  number: 12345678901234 # e.g. 12345678901234
+
