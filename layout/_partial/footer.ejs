@@ -6,10 +6,10 @@
     <% if (theme.icp.enable || theme.ga.enable) { %>
         <br>
         <% if (theme.icp.enable && theme.ga.enable) { %>
-            <a href="http://beian.miit.gov.cn/" target="_blank" rel="noopener nofollow"><img src="/css/images/icp.png" width="18" height="18"> <%= theme.icp.province %>ICP备<%= theme.icp.number %>号-<%= theme.icp.sub_number %></a> | <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=<%= theme.ga.number %>" target="_blank" rel="noopener nofollow"><img src="/css/images/ga.png" width="18" height="18"> <%= theme.ga.province %>公网安备 <%= theme.ga.number %>号</a>
+            <a href="http://beian.miit.gov.cn/" target="_blank" rel="noopener nofollow"><img src="/css/images/icp.png" width="18" height="18"> <%= theme.icp.number %></a> | <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=<%= theme.ga.number %>" target="_blank" rel="noopener nofollow"><img src="/css/images/ga.png" width="18" height="18"> <%= theme.ga.province %>公网安备 <%= theme.ga.number %>号</a>
         <% } else { %>
             <% if (theme.icp.enable) { %>
-                <a href="http://beian.miit.gov.cn/" target="_blank" rel="noopener nofollow"><img src="/css/images/icp.png" width="18" height="18"> <%= theme.icp.province %>ICP备<%= theme.icp.number %>号-<%= theme.icp.sub_number %></a>
+                <a href="http://beian.miit.gov.cn/" target="_blank" rel="noopener nofollow"><img src="/css/images/icp.png" width="18" height="18"> <%= theme.icp.number %></a>
             <% } else { %>
                 <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=<%= theme.ga.number %>" target="_blank" rel="noopener nofollow"><img src="/css/images/ga.png" width="18" height="18"> <%= theme.ga.province %>公网安备 <%= theme.ga.number %>号</a>
             <% } %>
