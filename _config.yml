@@ -67,3 +67,15 @@ mathjax:
 # Local Search Support
 local_search:
   enable: true
+
+# China Registration
+# e.g. 京ICP备12345678号-1
+icp:
+  enable: false
+  number: 京ICP备12345678号-1 # e.g. 京ICP备12345678号-1
+# e.g. 京公网安备 12345678901234号
+ga:
+  enable: false
+  province: 京           # e.g. 京
+  number: 12345678901234 # e.g. 12345678901234
+

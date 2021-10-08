@@ -3,6 +3,16 @@
     &copy; <%= new Date().getFullYear() %> | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
     <br>
     Theme by <a href="https://github.com/yanm1ng">yanm1ng</a>
+    <% if (theme.icp.enable || theme.ga.enable) { %>
+        <br>
+        <% if (theme.icp.enable && theme.ga.enable) { %>
+            <a href="http://beian.miit.gov.cn/" target="_blank" rel="noopener nofollow"><img src="/css/images/icp.png" width="18" height="18"> <%= theme.icp.number %></a> | <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=<%= theme.ga.number %>" target="_blank" rel="noopener nofollow"><img src="/css/images/ga.png" width="18" height="18"> <%= theme.ga.province %>公网安备 <%= theme.ga.number %>号</a>
+        <% } else if (theme.icp.enable) { %>
+            <a href="http://beian.miit.gov.cn/" target="_blank" rel="noopener nofollow"><img src="/css/images/icp.png" width="18" height="18"> <%= theme.icp.number %></a>
+        <% } else if (theme.ga.enable) { %>
+            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=<%= theme.ga.number %>" target="_blank" rel="noopener nofollow"><img src="/css/images/ga.png" width="18" height="18"> <%= theme.ga.province %>公网安备 <%= theme.ga.number %>号</a>
+        <% } %>
+    <% } %>
   </p>
 </footer>
 
