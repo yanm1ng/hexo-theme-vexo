@@ -48,7 +48,7 @@ google_analytics:
 disqus_shortname: 
 
 about: 
-  banner: ""
+  banner: /css/images/escheres.svg
   avatar: https://avatars3.githubusercontent.com/u/16443628?v=3&s=460
   description: "The end is always near."
   weibo_username: yanm1ng
